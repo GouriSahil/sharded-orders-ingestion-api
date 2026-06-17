@@ -41,11 +41,11 @@ def insert_batch_order(orders: list[dict]):
                         """
             psycopg2.extras.execute_values(cursor, query, records)
             connection.commit()
-            print(f"🚀 Batch written successfully: {len(records)} orders to Shard {shard_index}.")
+            print(f"Batch written successfully: {len(records)} orders to Shard {shard_index}.")
 
         except Exception as error:
             connection.rollback()
-            print(f"❌ Batch insertion failed on Shard {shard_index}: {error}")
+            print(f" Batch insertion failed on Shard {shard_index}: {error}")
             raise error
 
         finally:
@@ -71,11 +71,11 @@ def insert_order(order_data : dict):
             order_data["status"]
         ))
         connection.commit()
-        print(f"✅ Order {order_data['order_id']} committed successfully to Shard {shard_index}.")
+        print(f" Order {order_data['order_id']} committed successfully to Shard {shard_index}.")
 
     except Exception as error:
         connection.rollback()
-        print(f"❌ Error inserting order into Shard {shard_index}: {error}")
+        print(f" Error inserting order into Shard {shard_index}: {error}")
         raise error
 
     finally:

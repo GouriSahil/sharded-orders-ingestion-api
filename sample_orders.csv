@@ -1,0 +1,4 @@
+order_id,customer_id,order_date,order_amount,status
+9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d,CUST-123,2024-05-01T10:00:00,250.75,completed
+a3f9c2e1-1234-4abc-9def-5678901234ab,CUST-456,2024-05-02T11:30:00,89.99,pending
+c7d8e9f0-4321-4cde-8fed-1234567890cd,CUST-789,2024-05-03T09:15:00,1200.00,completed
