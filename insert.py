@@ -52,6 +52,7 @@ def insert_batch_order(orders: list[dict]):
             if cursor:
                 cursor.close()
             release_shard_connection(shard_index, connection)
+
 def insert_order(order_data : dict):
     shard_index = get_shard_index(order_data["customer_id"])
     connection = get_shard_connection(shard_index)

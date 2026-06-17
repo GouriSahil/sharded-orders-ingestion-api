@@ -82,6 +82,8 @@ def process_csv_file(file_path: str, batch_size: int = 500) -> dict:
 
     return summary
 
-
 if __name__ == "__main__":
-    result = process_csv_file("sample_orders.csv", batch_size=2)
+    result = process_csv_file("orders_10000.csv", batch_size=500)
+    print("\nSample failures:")
+    for f in result["failures"][:5]:
+        print(f)
